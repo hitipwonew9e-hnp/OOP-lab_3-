@@ -16,6 +16,8 @@ public:
     Product();
     Product(string n);
     Product(string n, int h, int x);
+    Product(const Product& other); //constructor copy
+    Product(Product&& other) noexcept; // constructor move
     Product(string n, int h);
     ~Product();
 

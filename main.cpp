@@ -19,5 +19,14 @@ int main() {
     customer.buyProduct(Product("Fish", 40, 25));
 
 
+    Product p1("Apple", 100, 10); //constructor copy
+    Product p2 = p1;
+    p2.showStatus();
+
+
+    Product r1("Apple", 100, 10);
+    Product r2 = std::move(p1);
+    r2.showStatus();
+    r1.showStatus();
     return 0;
 }
