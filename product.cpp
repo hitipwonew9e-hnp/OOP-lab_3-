@@ -8,7 +8,7 @@ Product::Product(const Product& other)  { //constructor copy
     cout << "Copy constructor called for product: " << name << endl;
 }
 
-Product::Product(Product&& other) noexcept
+Product::Product(Product&& other) noexcept  //constructor peremishenna
     : name(std::move(other.name)), price(other.price), discount(other.discount) {
     other.price = 0;
     other.discount = 0;
@@ -29,7 +29,7 @@ Product::~Product() {
 void Product::showStatus() const {
     cout << "Product: " << name << " | Price: $" << price
          << " | Discount: " << discount << "%" << endl;
-
+    cout << "This object address: " << this << endl;  // Using this
 }
 
 int Product::getPrice() const {

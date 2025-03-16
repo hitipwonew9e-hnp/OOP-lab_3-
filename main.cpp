@@ -24,7 +24,7 @@ int main() {
     p2.showStatus();
 
 
-    Product r1("Apple", 100, 10);
+    const Product r1("Apple", 100, 10);
     Product r2 = std::move(p1);
     r2.showStatus();
     r1.showStatus();
