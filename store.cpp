@@ -8,6 +8,6 @@ void Store::addProduct(const Product& p) {
 void Store::showProducts() const {
     cout << "Store inventory:\n";
     for (const auto& p : products) {
-        p.showStatus();
+        cout << p << endl;
     }
 }
