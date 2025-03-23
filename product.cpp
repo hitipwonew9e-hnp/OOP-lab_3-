@@ -1,46 +1,24 @@
 #include "product.h"
-#include <iostream>
 
-int Product::productCount = 0;
+Product::Product(const std::string& n, double p) : Item(n, p) {}
 
-Product::Product() : Item(), discount(0) {
-    incrementProductCount();
+void Product::display() const {
+    std::cout << "Product: " << name << ", Price: " << price << "$" << std::endl;
 }
 
-Product::Product(std::string n, int h, int x) : Item(n, h), discount(x) {
-    incrementProductCount();
+Electronic::Electronic(const std::string& n, double p, int warranty)
+    : Product(n, p), warrantyMonths(warranty) {}
+
+void Electronic::display() const {
+    std::cout << "Electronic: " << name << ", Price: " << price << "$"
+              << ", Warranty: " << warrantyMonths << " months" << std::endl;
 }
 
-Product::Product(std::string n, int h) : Item(n, h), discount(0) {
-    incrementProductCount();
+FoodProduct::FoodProduct(const std::string& n, double p, const std::string& expDate)
+    : Product(n, p), expirationDate(expDate) {}
+
+void FoodProduct::display() const {
+    std::cout << "Food: " << name << ", Price: " << price << "$"
+              << ", Expiration Date: " << expirationDate << std::endl;
 }
 
-Product::Product(const Product& other) : Item(other), discount(other.discount) {
-    incrementProductCount();
-}
-
-Product::Product(Product&& other) noexcept : Item(std::move(other)), discount(other.discount) {
-    other.discount = 0;
-    incrementProductCount();
-}
-
-Product::~Product() {
-    --productCount;
-}
-
-void Product::incrementProductCount() {
-    ++productCount;
-}
-
-int Product::getProductCount() {
-    return productCount;
-}
-
-void Product::showStatus() const {
-    Item::showStatus();
-    std::cout << "Discount: " << discount << "%\n";
-}
-
-Product Product::operator+(const Product& other) const {
-    return Product(this->name + " & " + other.name, this->price + other.price, this->discount + other.discount);
-}

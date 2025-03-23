@@ -1,14 +1,20 @@
 #ifndef STORE_H
 #define STORE_H
 
-#include "product.h"
 #include <vector>
+#include <memory>
+#include "product.h"
 
 class Store {
 private:
-    std::vector<Product> products;
-
+    std::vector<std::shared_ptr<Product>> inventory;
 public:
-    void addProduct(const Product& p);
+    Store();
+    void addProduct(std::shared_ptr<Product> p);
     void showProducts() const;
+    std::shared_ptr<Product> findProduct(const std::string& name) const;
+    void removeProduct(const std::string& name);
 };
+
+#endif // STORE_H
+

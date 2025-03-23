@@ -4,22 +4,27 @@
 #include "item.h"
 
 class Product : public Item {
-private:
-    int discount;
-    static int productCount;
-    void incrementProductCount();
-
 public:
-    Product();
-    Product(std::string n, int h, int x);
-    Product(std::string n, int h);
-    Product(const Product& other);
-    Product(Product&& other) noexcept;
-    ~Product();
+    Product(const std::string& n, double p);
+    virtual void display() const override;
+};
 
-    static int getProductCount();
-    void showStatus() const override; // Позначаємо метод як const
-    Product operator+(const Product& other) const;
+class Electronic : public Product {
+private:
+    int warrantyMonths;
+public:
+    Electronic(const std::string& n, double p, int warranty);
+    void display() const override;
+};
+
+class FoodProduct : public Product {
+private:
+    std::string expirationDate;
+public:
+    FoodProduct(const std::string& n, double p, const std::string& expDate);
+    void display() const override;
 };
 
 #endif // PRODUCT_H
+
+

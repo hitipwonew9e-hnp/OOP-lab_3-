@@ -1,18 +1,21 @@
 #ifndef ITEM_H
 #define ITEM_H
 
+#include <iostream>
 #include <string>
+#include <memory>
 
 class Item {
 protected:
     std::string name;
-    int price;
-
+    double price;
 public:
-    Item();
-    Item(std::string n, int p);
+    Item(const std::string& n, double p);
     virtual ~Item();
-    virtual void showStatus() const;
+    virtual void display() const;
+    double getPrice() const;
+    std::string getName() const;
+    friend std::ostream& operator<<(std::ostream& os, const Item& item);
 };
 
 #endif // ITEM_H

@@ -1,12 +1,18 @@
 #include "item.h"
-#include <iostream>
 
-Item::Item() : name("Unknown"), price(0) {}
-
-Item::Item(std::string n, int p) : name(n), price(p) {}
+Item::Item(const std::string& n, double p) : name(n), price(p) {}
 
 Item::~Item() {}
 
-void Item::showStatus() const {
-    std::cout << "Item: " << name << ", Price: " << price << "\n";
+void Item::display() const {
+    std::cout << "Item: " << name << ", Price: $" << price << std::endl;
 }
+
+double Item::getPrice() const { return price; }
+std::string Item::getName() const { return name; }
+
+std::ostream& operator<<(std::ostream& os, const Item& item) {
+    os << "Item: " << item.name << ", Price: $" << item.price;
+    return os;
+}
+

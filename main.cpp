@@ -1,17 +1,24 @@
 #include "store.h"
-#include <iostream>
+#include "customer.h"
 
 int main() {
     Store myStore;
-    Product p1("Laptop", 1000, 10);
-    Product p2("Phone", 500, 5);
-
-    myStore.addProduct(p1);
-    myStore.addProduct(p2);
+    myStore.addProduct(std::make_shared<Electronic>("Laptop", 1200, 24));
+    myStore.addProduct(std::make_shared<FoodProduct>("Apple", 2, "2025-01-01"));
 
     myStore.showProducts();
 
-    std::cout << "Total Products: " << Product::getProductCount() << "\n";
+    Customer customer("John", 1000);
+    customer.addToCart(myStore.findProduct("Laptop"));
+    customer.addToCart(myStore.findProduct("Apple"));
+
+    customer.checkout();
+    customer.addBalance(500);
+    customer.checkout();
+    customer.refund("Apple");
+
     return 0;
 }
+
+
 
