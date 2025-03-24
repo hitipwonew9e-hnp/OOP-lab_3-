@@ -1,10 +1,11 @@
 #include "store.h"
+#include <iostream>
 #include "customer.h"
 
 int main() {
     Store myStore;
     myStore.addProduct(std::make_shared<Electronic>("Laptop", 1200, 24));
-    myStore.addProduct(std::make_shared<FoodProduct>("Apple", 2, "2025-01-01"));
+    myStore.addProduct(std::make_shared<FoodProduct>("Apple", 200, "2025-01-01"));
 
     myStore.showProducts();
 
@@ -19,6 +20,3 @@ int main() {
 
     return 0;
 }
-
-
-
