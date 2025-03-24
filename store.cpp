@@ -30,6 +30,6 @@ void Store::removeProduct(const std::string& name) {
             return product->getName() == name;
         });
 
-    inventory.erase(it, inventory.end()); // Тепер коректно видаляємо елементи
+    inventory.erase(it, inventory.end());
 }
 

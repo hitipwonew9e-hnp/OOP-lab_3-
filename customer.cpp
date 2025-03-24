@@ -63,3 +63,16 @@ void Customer::refund(const std::string& name) {
     cart.removeProduct(name);
     std::cout << name << " return item.\n";
 }
+Cart& Cart::operator=(const Cart& other) {
+    if (this == &other) return *this;
+    items = other.items;
+    return *this;
+}
+
+Customer& Customer::operator=(const Customer& other) {
+    if (this == &other) return *this;
+    name = other.name;
+    balance = other.balance;
+    cart = other.cart;
+    return *this;
+}
