@@ -1,0 +1,10 @@
+# ninja log v6
+34	542	7652385648297077	CMakeFiles/Lab_2.dir/product.cpp.obj	717c48479e59f745
+587	680	7652385653821626	Lab_2.exe	380556539c29638d
+27	666	7652377742840975	CMakeFiles/Lab_2.dir/customer.cpp.obj	e7b091396eba205
+157	1097	7652370768836223	CMakeFiles/Lab_2.dir/item.cpp.obj	c76a8716129d9e19
+18	605	7652377742641026	CMakeFiles/Lab_2.dir/store.cpp.obj	6a538e2f30348b45
+30	572	7652385648257080	CMakeFiles/Lab_2.dir/main.cpp.obj	7a058ba38ebbc87a
+39	847	7652708387132564	build.ninja	3c95da6ab1cbc40e
+43	558	7652385648387078	CMakeFiles/Lab_2.dir/foodproduct.cpp.obj	7c509f2b1b0e0935
+39	587	7652385648347399	CMakeFiles/Lab_2.dir/electronic.cpp.obj	303700c36ae1a3a5

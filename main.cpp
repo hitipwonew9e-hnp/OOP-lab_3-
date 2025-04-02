@@ -1,22 +1,31 @@
-#include "store.h"
-#include <iostream>
-#include "customer.h"
+#include "product.h"
+#include "electronic.h"
+#include "foodproduct.h"
+
+void printProductInfo(const Product& ref) {
+    ref.display();
+}
 
 int main() {
-    Store myStore;
-    myStore.addProduct(std::make_shared<Electronic>("Laptop", 1200, 24));
-    myStore.addProduct(std::make_shared<FoodProduct>("Apple", 200, "2025-01-01"));
 
-    myStore.showProducts();
+    Product::staticMethod();
 
-    Customer customer("John", 1000);
-    customer.addToCart(myStore.findProduct("Laptop"));
-    customer.addToCart(myStore.findProduct("Apple"));
 
-    customer.checkout();
-    customer.addBalance(500);
-    customer.checkout();
-    customer.refund("Apple");
+    Product* ptr1 = new Electronic("Laptop", 1200, 2);
+    Product* ptr2 = new FoodProduct("Milk", 2.5, "2025-06-01");
+
+    ptr1->display(); // Electronic
+    ptr2->display(); // FoodProduct
+
+    delete ptr1;
+    delete ptr2;
+
+
+    Electronic phone("Smartphone", 999, 1);
+    FoodProduct apple("Apple", 1.2, "2025-04-10");
+
+    printProductInfo(phone);
+    printProductInfo(apple);
 
     return 0;
 }

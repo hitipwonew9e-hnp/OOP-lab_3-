@@ -12,7 +12,7 @@ protected:
 public:
     Item(const std::string& n, double p);
     virtual ~Item();
-    virtual void display() const;
+    virtual void display() const = 0; // Чисто віртуальна функція
     double getPrice() const;
     std::string getName() const;
     friend std::ostream& operator<<(std::ostream& os, const Item& item);
