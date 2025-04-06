@@ -13,3 +13,7 @@ void Product::display() const {
 void Product::staticMethod() {
     std::cout << "This is a static method from Product class" << std::endl;
 }
+
+void Product::nonVirtualMethod() const {
+    std::cout << "Product non-virtual method" << std::endl;
+}

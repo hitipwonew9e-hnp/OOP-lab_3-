@@ -12,4 +12,9 @@ add_executable(Lab_2 main.cpp
         foodproduct.cpp
         foodproduct.cpp
         item.h
-        item.cpp)
+        item.cpp
+        store.h
+        store.cpp
+        store.h
+        store.h
+        menu.cpp)

@@ -79,6 +79,18 @@ build CMakeFiles/Lab_2.dir/item.cpp.obj: CXX_COMPILER__Lab_2_unscanned_Debug C$:
   OBJECT_DIR = CMakeFiles\Lab_2.dir
   OBJECT_FILE_DIR = CMakeFiles\Lab_2.dir
 
+build CMakeFiles/Lab_2.dir/store.cpp.obj: CXX_COMPILER__Lab_2_unscanned_Debug C$:/OOP/Lab_2/OOP-lab_3-/store.cpp || cmake_object_order_depends_target_Lab_2
+  DEP_FILE = CMakeFiles\Lab_2.dir\store.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Lab_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Lab_2.dir
+
+build CMakeFiles/Lab_2.dir/menu.cpp.obj: CXX_COMPILER__Lab_2_unscanned_Debug C$:/OOP/Lab_2/OOP-lab_3-/menu.cpp || cmake_object_order_depends_target_Lab_2
+  DEP_FILE = CMakeFiles\Lab_2.dir\menu.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Lab_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Lab_2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Lab_2
@@ -87,7 +99,7 @@ build CMakeFiles/Lab_2.dir/item.cpp.obj: CXX_COMPILER__Lab_2_unscanned_Debug C$:
 #############################################
 # Link the executable Lab_2.exe
 
-build Lab_2.exe: CXX_EXECUTABLE_LINKER__Lab_2_Debug CMakeFiles/Lab_2.dir/main.cpp.obj CMakeFiles/Lab_2.dir/product.cpp.obj CMakeFiles/Lab_2.dir/electronic.cpp.obj CMakeFiles/Lab_2.dir/foodproduct.cpp.obj CMakeFiles/Lab_2.dir/item.cpp.obj
+build Lab_2.exe: CXX_EXECUTABLE_LINKER__Lab_2_Debug CMakeFiles/Lab_2.dir/main.cpp.obj CMakeFiles/Lab_2.dir/product.cpp.obj CMakeFiles/Lab_2.dir/electronic.cpp.obj CMakeFiles/Lab_2.dir/foodproduct.cpp.obj CMakeFiles/Lab_2.dir/item.cpp.obj CMakeFiles/Lab_2.dir/store.cpp.obj CMakeFiles/Lab_2.dir/menu.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Lab_2.dir

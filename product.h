@@ -4,12 +4,10 @@
 #include <iostream>
 #include <string>
 
-
 class IPrintable {
 public:
     virtual void print() const = 0;
 };
-
 
 class Product : public IPrintable {
 protected:
@@ -24,8 +22,11 @@ public:
     virtual std::string getCategory() const = 0;
 
     static void staticMethod();
-
     void print() const override { display(); }
+    void nonVirtualMethod() const;
+
+    std::string getName() const { return name; }
+    double getPrice() const { return price; }
 };
 
 #endif // PRODUCT_H

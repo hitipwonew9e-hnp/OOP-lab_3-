@@ -1,0 +1,2 @@
+Electronic|NoteBook|1000|20
+Food|Apple|10|2025-04-06

@@ -10,3 +10,7 @@ void Electronic::display() const {
 std::string Electronic::getCategory() const {
     return "Electronic";
 }
+
+void Electronic::nonVirtualMethod() const {
+    std::cout << "Electronic non-virtual method" << std::endl;
+}

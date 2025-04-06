@@ -10,6 +10,9 @@ public:
     Electronic(const std::string& name, double price, int warranty);
     void display() const override;
     std::string getCategory() const override;
+    void nonVirtualMethod() const;
+
+    int getWarranty() const { return warranty; }
 };
 
 #endif // ELECTRONIC_H

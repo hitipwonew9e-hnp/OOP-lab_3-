@@ -10,6 +10,8 @@ public:
     FoodProduct(const std::string& name, double price, const std::string& expirationDate);
     void display() const override;
     std::string getCategory() const override;
+
+    std::string getExpirationDate() const { return expirationDate; }
 };
 
 #endif // FOODPRODUCT_H
