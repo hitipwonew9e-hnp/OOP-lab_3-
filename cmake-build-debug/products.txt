@@ -1,2 +1,3 @@
-Electronic|NoteBook|1000|20
-Food|Apple|10|2025-04-06
+Electronic|Phone-12|2000|15
+Electronic|Computer|5000|5
+Food|Banana|10|15

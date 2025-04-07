@@ -52,7 +52,7 @@ void userMenu() {
 
     if (choice > 0 && choice <= products.size()) {
         std::ofstream history("user_history.txt", std::ios::app);
-        history << "User bought: ";
+        history << "User bought: " << products[choice]<< std::endl;
         products[choice - 1]->print();
         history << "\n";
         std::cout << "Purchase recorded.\n";
